@@ -4,6 +4,13 @@ bars.addEventListener('click', function(){
     navbarNav.classList.toggle('active')
 })
 
+const questionAnswer = document.querySelectorAll('.question-answer')
+questionAnswer.forEach(qa=>{
+    qa.addEventListener('click', function(){
+        qa.classList.toggle('active')
+    })
+})
+
 const cardWrapper = document.querySelector('.card-wrapper')
 
 const API_URL = 'https://fakestoreapi.com/'
@@ -35,7 +42,7 @@ function showData(data){
                     <div class="details">
                         <div>
                             <h2>${data.title}</h2>
-                            <p>${data.price}</p>
+                            <p>$${data.price}</p>
                         </div>
                         <button>See Details</button>
                     </div>
