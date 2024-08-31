@@ -1,3 +1,9 @@
+const API_URL = 'https://fakestoreapi.com/'
+
+const cardWrapper = document.querySelector('.card-wrapper')
+const productsCategory = document.getElementById('products-category')
+const categoriesDropdown = document.getElementById('categories');
+
 const bars = document.querySelector('.bars')
 bars.addEventListener('click', function(){
     const navbarNav = document.querySelector('.navbar-nav')
@@ -11,13 +17,8 @@ questionAnswer.forEach(qa=>{
     })
 })
 
-const cardWrapper = document.querySelector('.card-wrapper')
-
-const API_URL = 'https://fakestoreapi.com/'
-
-fetchData('products?limit=5')
-
-async function fetchData(endpoint){
+fetchNewProduct('products?limit=5')
+async function fetchNewProduct(endpoint){
     try{
         const res = await fetch(`${API_URL}${endpoint}`)
         if(!res.ok){
@@ -26,25 +27,66 @@ async function fetchData(endpoint){
 
         const datas = await res.json()
         datas.forEach(data=>{
-            showData(data)
+            showNewProduct(data)
         })
     }catch(error){
         console.error(error);
     }
 }
 
-function showData(data){
+function showNewProduct(data){
     cardWrapper.innerHTML += `
     <div class="card">
                     <div class="img-box">
                         <img src="${data.image}" alt="${data.title}">
                     </div>
                     <div class="details">
-                        <div>
-                            <h2>${data.title}</h2>
+                    <h2>${data.title}</h2>
+                    <div>
                             <p>$${data.price}</p>
+                            <button>See Details</button>
+                            </div>
+                    </div>
+                </div>
+    `
+}
+
+categoriesDropdown.addEventListener('change', function() {
+    const selectedCategory = this.value;
+    if(selectedCategory === ''){
+        getCategories('', "products");
+    } else {
+        getCategories(selectedCategory, "products/category");
+    }
+});
+
+getCategories('', "products");
+async function getCategories(category, endpoint){
+    try{
+        const res = await fetch (`${API_URL}${endpoint}/${category}`)
+        const datas = await res.json()
+        productsCategory.innerHTML = ''
+        datas.forEach(category=>{
+            showProductCategory(category)
+        })
+    }catch(error){
+        console.error(error);
+    }
+}
+
+function showProductCategory(data){
+    productsCategory.innerHTML += `
+    <div class="card">
+                    <div class="img-box">
+                        <img src="${data.image}" alt="${data.title}">
+                    </div>
+                    <div class="details">
+                        <h2>${data.title}</h2>
+                        <div>
+                            <p>$${data.price}</p>
+                            <p>Rate: ${data.rating.rate}</p>
+                            <button>Add To Cart</button>
                         </div>
-                        <button>See Details</button>
                     </div>
                 </div>
     `
