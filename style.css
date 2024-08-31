@@ -132,6 +132,82 @@ body{
     color: #333333;
 }
 
+/* section products */
+.new-products{
+    min-height: 100vh;
+    background-color: #fff;
+    padding-block: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.new-products .main-new-products{
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.new-products .main-new-products h1{
+    font-size: 2rem;
+    color: #333333;
+}
+
+.new-products .main-new-products .card-wrapper{
+    /* border: 1px solid black; */
+    width: 100%;
+    padding-inline: 0.2rem;
+    /* padding: 1rem 0.2rem; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.new-products .main-new-products .card-wrapper .card{
+    border: 1px solid #333333;
+    
+    /* flex: 1; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* align-items: center; */
+    gap: 1rem;
+    width: 250px;
+}
+
+.new-products .main-new-products .card-wrapper .card .img-box{
+    /* border: 1px solid green; */
+    width: 100%;
+    height: 250px;
+}
+
+.new-products .main-new-products .card-wrapper .card .img-box img{
+    width: 100%;
+    height: 100%;
+}
+
+.new-products .main-new-products .card-wrapper .card .details{
+    /* border: 1px solid purple; */
+    padding: 0.5rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.new-products .main-new-products .card-wrapper .card .details button{
+    background-color: #333333;
+    color: #fff;
+    border: none;
+    width: 100%;
+    padding-block: 0.5rem;
+    font-size: 1rem;
+}
+
 @media (min-width: 768px) {
     .navbar{
         padding-inline: 30px;
