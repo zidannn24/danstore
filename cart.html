@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products</title>
+    <title>Cart</title>
     <link rel="stylesheet" href="style.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,6 +16,7 @@
     <script src="https://kit.fontawesome.com/7c2e14a3f8.js" crossorigin="anonymous"></script>
 </head>
 <body>
+
     <nav class="navbar">
         <h1>DANSHOP</h1>
         <div class="nav-right">
@@ -26,43 +27,19 @@
                 <li><a href="index.html#contact">Contact</a></li>
             </ul>
             <div class="personal">
-                <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
                 <a href="profile.html"><i class="fa-solid fa-user"></i></a>
             </div>
             <i class="fa-solid fa-bars bars"></i>
         </div>
     </nav>
 
-    <section class="products">
-        <main class="main-products">
-            <div class="category-selection">
-                <label for="categories">Select Categories: </label>
-                <select id="categories" name="categories" class="categories">
-                    <option value="">All Categories</option>
-                    <option value="electronics">Electronics</option>
-                    <option value="jewelery">Jewelery</option>
-                    <option value="men's clothing">Men's clothing</option>
-                    <option value="women's clothing">Women's clothing</option>
-                </select>           
-            </div>
-            <div class="products-category" id="products-category">
-                <!-- <div class="card">
-                    <div class="img-box">
-                        <img src="" alt="">
-                    </div>
-                    <div class="details">
-                        <h2>TITLE</h2>
-                        <div>
-                            <p>PRICE</p>
-                            <p>Rate</p>
-                            <button>Add To Cart</button>
-                        </div>
-                    </div>
-                </div> -->
-            </div>
+    <section class="cart">
+        <main class="main-cart">
+            <h1 id="casas"></h1>
         </main>
     </section>
-
-    <script src="js/products.js"></script>
+    
+    <script type="module" src="js/cart.js"></script>
 </body>
 </html>

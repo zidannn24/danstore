@@ -393,7 +393,7 @@ body{
 
 .products .main-products .products-category .card{
     border: 1px solid #333333;
-    width: 250px;
+    width: 170px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -402,7 +402,7 @@ body{
 .products .main-products .products-category .card .img-box{
     /* border: 1px solid blue; */
     width: 100%;
-    height: 250px;
+    height: 170px;
 }
 
 .products .main-products .products-category .card .img-box img{
@@ -410,8 +410,99 @@ body{
     height: 100%;
 }
 
+.products .main-products .products-category .card .details{
+    width: 100%;
+    overflow: hidden;
+}
+
 .products .main-products .products-category .card .details h2{
-    font-size: 1.3rem;
+    font-size: 1rem;
+}
+
+/* section profile */
+.profile{
+    min-height: 100vh;
+    background-color: #333333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-block: 10rem;
+    padding-inline: 10px;
+}
+
+.profile .main-profile{
+    /* margin: auto; */
+    width: 100%;
+    max-width: 600px;
+    background-color: #fff;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile .main-profile .row{
+    text-align: center;
+}
+
+.profile .main-profile .row img{
+    width: 100px;
+    border-radius: 50%;
+}
+
+.profile .main-profile form{
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    /* align-items: center; */
+}
+
+.profile .main-profile form .input-group{
+    border: 1px solid #333333;
+    width: 100%;
+    padding: 5px;
+}
+
+.profile .main-profile form .input-group input{
+    width: 100%;
+    font-size: 1rem;
+}
+
+.profile .main-profile form .address-form{
+    border: 1px solid #333;
+    padding: 10px;
+}
+
+.profile .main-profile form .btn-group{
+    text-align: center;
+}
+
+.profile .main-profile form .btn-group button{
+    border: none;
+    padding: 5px 10px;
+}
+
+.profile .main-profile form .btn-group button.close{
+    background-color: #fff;
+    color: #333333;
+    border: 1px solid #333;
+}
+
+.profile .main-profile form .btn-group button.edit{
+    background-color: #333333;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.profile .main-profile form button{
+    background-color: #333;
+    padding-block: 5px;
+    color: #fff;
+    border: none;
+    font-size: 16px;
 }
 
 @media (min-width: 375px) {
@@ -431,6 +522,25 @@ body{
         font-size: 1.5rem;
     }
 
+    .products .main-products .category-selection select{
+        padding: 1rem;
+    }
+    
+    .products .main-products .products-category .card{
+        width: 250px;
+    }
+
+    .products .main-products .products-category .card .img-box{
+        height: 250px;
+    }
+
+    .products .main-products .products-category .card .details h2{
+        font-size: 1.2rem;
+    }
+
+    .profile .main-profile form .input-group input{
+        padding: 10px;
+    }
     
 }
 

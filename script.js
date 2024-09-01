@@ -91,3 +91,25 @@ function showProductCategory(data){
                 </div>
     `
 }
+
+getProfile('users/1');
+
+async function getProfile(endpoint) {
+    try {
+        const res = await fetch(`${API_URL}${endpoint}`);
+        const data = await res.json();
+        
+        // Memperbarui nilai input dan elemen lain dengan data yang diterima
+        document.getElementById('name-display').innerText = 'halo';
+        document.getElementById('email').value = data.email;
+        document.getElementById('name').value = data.name.firstname + ' ' + data.name.lastname;
+        document.getElementById('username').value = data.username;
+        document.getElementById('password').value = ''; // Kosongkan password untuk keamanan
+        document.getElementById('city').value = data.address.city;
+        document.getElementById('street').value = data.address.street;
+        document.getElementById('number').value = data.address.number;
+        document.getElementById('phone').value = data.phone;
+    } catch (error) {
+        console.error('Error fetching profile:', error);
+    }
+}
