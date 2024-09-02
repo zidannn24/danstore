@@ -158,7 +158,7 @@ function page(){
 
                 cardCart.innerHTML += `
                 
-                    <i class="fa-solid fa-trash"></i>
+                    
                     <div class="product-box">
                         <div class="img-product-box">
                             <img src="${data.image}" alt="">
@@ -174,6 +174,7 @@ function page(){
                                     <i class="fa-solid fa-square-plus"></i>
                                 </div>
                                 <p id="product-price-cart">$${data.price}</p>
+                                <i class="fa-solid fa-trash"></i>
                             </div>
                         </div>
                     </div>

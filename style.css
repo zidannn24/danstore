@@ -536,7 +536,8 @@ body{
 
 .cart .main-cart .row-cart .card-cart{
     /* border: 1px solid yellow; */
-    border-top: 1px solid red;
+    border-top: 1px solid #333;
+    padding-top: 10px;
     width: 100%;
     height: 100%;
     display: flex;
@@ -589,6 +590,7 @@ body{
     align-items: center;
     width: 100%;
     gap: 10px;
+    justify-content: space-between;
 }
 
 .cart .main-cart .row-cart .card-cart .product-box .details-product-box .price-product-box .qty{
