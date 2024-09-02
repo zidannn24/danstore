@@ -151,8 +151,7 @@ function page(){
                 console.log(qty);
 
                 const mainCart = document.getElementById('main-cart')
-                const row = document.createElement('div')
-                row.classList.add('row-cart')
+                const row = document.querySelector('.row-cart')
 
                 const cardCart = document.createElement('div')
                 cardCart.classList.add('card-cart')
