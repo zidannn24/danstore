@@ -144,39 +144,45 @@ function page(){
                 const data = await res.json()
                 console.log(data);
 
-                // const productImgCart = document.getElementById('product-img-cart')
-                // productImgCart.src = data.image
+                // qty.forEach(quantity=>{
+                //     console.log(quantity);
+                // })
+
+                console.log(qty);
 
                 const mainCart = document.getElementById('main-cart')
                 const row = document.createElement('div')
-                row.classList.add('row')
-                row.innerHTML += `
-                <div class="row">
-                <div class="one">
+                row.classList.add('row-cart')
+
+                const cardCart = document.createElement('div')
+                cardCart.classList.add('card-cart')
+
+                cardCart.innerHTML += `
+                
                     <i class="fa-solid fa-trash"></i>
                     <div class="product-box">
                         <div class="img-product-box">
                             <img src="${data.image}" alt="">
                         </div>
-                        <div class ="title-product-box">
-                            <p>${data.title}</p>
+                        <div class="details-product-box">
+                            <div class="coba">
+                                <p class="product-name-card">${data.title}</p>
+                            </div>
+                            <div class="price-product-box">
+                                <div class="qty">
+                                    <i class="fa-solid fa-square-minus"></i>
+                                    <p class="product-qty-cart">${qty}</p>
+                                    <i class="fa-solid fa-square-plus"></i>
+                                </div>
+                                <p id="product-price-cart">$${data.price}</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="two">
-                    <div class="qty">
-                        <i class="fa-solid fa-square-minus"></i>
-                        <p class="product-qty-cart">1</p>
-                        <i class="fa-solid fa-square-plus"></i>
-                    </div>
-                    <p id="product-price-cart">$</p>
-                </div>
-            </div>
+                
                 `
-
+                row.append(cardCart)
                 mainCart.appendChild(row)
 
-                // console.log(data.id);
             }catch(error){
 
             }

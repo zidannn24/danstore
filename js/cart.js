@@ -151,3 +151,106 @@ getIdUser()
 //     }
 // }
 
+.cart{
+    padding-block: 7rem;
+    padding-inline: 10px;
+    min-height: 100vh;
+}
+
+.cart .main-cart{
+    border: 1px solid #333333;
+    border-radius: 14px;
+    padding: 10px;
+    /* max-width: 90%; */
+    margin: auto;
+}
+
+.cart .main-cart h1{
+    color: #333333;
+    /* border-bottom: 1px solid #333333; */
+}
+
+.cart .main-cart .row{
+    border: 1px solid red;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    /* gap: 10px; */
+    /* width: 300px; */
+    width: 100%;
+    padding-block: 10px;
+}
+
+.cart .main-cart .row i{
+    font-size: 1.2rem;
+}
+
+.cart .main-cart .row .product-box{
+    border: 1px solid green;
+    height: 100px;
+    /* max-height: 100%; */
+    /* height: 150px; */
+    /* width: 100%; */
+    /* width: 100%; */
+    /* max-width: 100%; */
+    display: flex;
+    /* gap: 1rem; */
+    /* width: 100%; */
+}
+
+.cart .main-cart .row .product-box .img-product-box{
+    border: 1px solid purple;
+    width: 100px;
+    height: 100%;
+}
+
+.cart .main-cart .row .product-box .img-product-box img{
+    width: 100%;
+    height: 100%;
+}
+
+.cart .main-cart .row .product-box .details-product-box{
+    border: 1px solid black;
+    /* height: 100%; */
+    /* width: 100%; */
+    /* width: 50%; */
+    /* max-width: 100%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cart .main-cart .row .product-box .details-product-box .nyoba{
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+}
+
+.cart .main-cart .row .product-box .details-product-box .price-product-box{
+    border: 1px solid yellowgreen;
+    display: flex;
+    /* justify-content: space-between; */
+    /* padding-inline: 1rem; */
+    /* gap: 1rem; */
+    align-items: center;
+    width: 100%;
+    /* height: 100%; */
+}
+
+/* .cart .main-cart .row .product-box .title-product-box{
+    overflow: auto;
+    max-width: 100px;
+} */
+
+.cart .main-cart .row .qty{
+    border: 1px solid black;
+    /* width: 100%; */
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    gap: 1rem;
+}
+
+.cart .main-cart .row .qty i{
+    font-size: 1.2rem;
+}
