@@ -173,7 +173,7 @@ function page(){
                                     <p class="product-qty-cart">${qty}</p>
                                     <i class="fa-solid fa-square-plus"></i>
                                 </div>
-                                <p id="product-price-cart">$${data.price}</p>
+                                <p class="product-price-cart">$${data.price}</p>
                                 <i class="fa-solid fa-trash"></i>
                             </div>
                         </div>
