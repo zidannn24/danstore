@@ -11,7 +11,7 @@ bars.addEventListener('click', function(){
 })
 
 getProfile();
-export async function getProfile() {
+async function getProfile() {
     try {
         const res = await fetch(`${API_URL}users/1`);
         const data = await res.json();
@@ -27,11 +27,23 @@ export async function getProfile() {
         document.getElementById('number').value = data.address.number;
         document.getElementById('phone').value = data.phone;
 
-        const userId = data.id
-        return userId
+        getId(data.id)
 
     } catch (error) {
         console.error('Error fetching profile:', error);
     }
 }
 
+export function getId(id){
+    return id
+}
+
+// async function getId(id){
+//     try{
+//         const res = await fetch(`${API_URL}carts/user/${id}`)
+//         const data = await res.json()
+//         console.log(data);
+//     }catch(error){
+//         console.error(error);
+//     }
+// }
