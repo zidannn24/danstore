@@ -1,7 +1,7 @@
 # DANSTORE
 
 ## Deskripsi
-Danstore adalah web sederhana semi-dinamis untuk e-commerce menggunakan public API, meskipun menggunakan API tapi untuk fitur fitur seperti menambahkan, menghapus hanya gimmick karena menggunakan public API, web ini menampilkan beberapa halaman seperti home, products, cart, dan akun profile.
+Danstore adalah web sederhana semi-dinamis untuk e-commerce menggunakan public API dari Fake Store API, meskipun menggunakan API tapi untuk fitur fitur seperti menambahkan, menghapus hanya gimmick karena menggunakan public API, web ini menampilkan beberapa halaman seperti home, products, cart, dan akun profile.
 
 ## Fitur
 - Halaman home untuk melihat produk baru, faq, dan contact
@@ -13,7 +13,6 @@ Danstore adalah web sederhana semi-dinamis untuk e-commerce menggunakan public A
 - HTML
 - CSS
 - JAVASCRIPT
-- API DARI FAKE STORE API
 
 ## Screenshot
 ### Halaman home
